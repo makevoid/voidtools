@@ -1,8 +1,8 @@
 # Voidtools
+#### growing toolset for Rails 3 dm+jquery+haml+warden setup flavored with:
 
-## growing toolset for Rails 3 dm+jquery+haml+warden setup flavored with:
+---
 
-### DataMapper
 ### DataMapper
 - `error_messages_for`
 
@@ -14,7 +14,6 @@
 
 note: ruby 1.9 required
 
----
 ## DataMapper
 ### error_messages_for
 
