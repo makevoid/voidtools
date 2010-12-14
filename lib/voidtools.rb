@@ -19,6 +19,8 @@ module Voidtools
       #    # end
       # end
       require 'voidtools/dm/form_helpers'
+      require 'voidtools/dm/name_url'
+      require 'voidtools/dm/paginable'
     end
   end
   
