@@ -18,7 +18,7 @@ module Voidtools
       #    #   include FormHelpers
       #    # end
       # end
-      require 'voidtools/datamapper/form_helpers'
+      require 'voidtools/dm/form_helpers'
     end
   end
   
