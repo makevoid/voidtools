@@ -1,7 +1,7 @@
 module NameUrl
   def generate_name_url
-    name_url = name.gsub(/'|"/, ' ').gsub(/\s+/, '_').downcase
-    update(name_url: name_url)
+    nurl = name.gsub(/'|"/, ' ').gsub(/\s+/, '_').downcase
+    update(name_url: nurl)
   end
 end
 
