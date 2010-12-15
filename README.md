@@ -24,3 +24,7 @@ in your form view:
 or 
 
 `error_messages_for @resource`
+
+### Build & install
+
+gem build voidtools.gemspec; gem install voidtools-0.1.2.gem

@@ -13,14 +13,14 @@ module Voidtools
       #   event = ActiveSupport::Notifications::Event.new(*args)
       #   puts "Voidrails - got notification: #{event.inspect}"
       # end
-      # ActiveSupport.on_load(:action_view) do
-      #    # module ApplicationHelper
-      #    #   include FormHelpers
-      #    # end
-      # end
       require 'voidtools/dm/form_helpers'
-      require 'voidtools/dm/name_url'
-      require 'voidtools/dm/paginable'
+      ActiveSupport.on_load(:action_view) do
+         module ApplicationHelper
+           include Voidtools::FormHelpers
+         end
+      end
+      # require 'voidtools/dm/name_url'
+      # require 'voidtools/dm/paginable'
     end
   end
   
