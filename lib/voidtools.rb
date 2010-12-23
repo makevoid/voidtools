@@ -26,4 +26,8 @@ module Voidtools
     end
   end
   
+  if defined?(Sinatra)
+    path = File.expand_path "../", __FILE__
+    require "#{path}/voidtools/sinatra/sinatra"
+  end
 end
