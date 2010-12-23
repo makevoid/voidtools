@@ -1,14 +1,14 @@
-module Voidtools
-  
-  # namespace our plugin and inherit from Rails::Railtie
-  # to get our plugin into the initialization process
-  if defined?(Rails)
+if defined?(Rails)
+  module Voidtools
+    # namespace our plugin and inherit from Rails::Railtie
+    # to get our plugin into the initialization process
+
     class Railtie < Rails::Railtie
- 
+
       # configure our plugin on boot. other extension points such
       # as configuration, rake tasks, etc, are also available
       initializer "voidtools.initialize" do |app|
- 
+
         # subscribe to all rails notifications: controllers, AR, etc.
         # ActiveSupport::Notifications.subscribe do |*args|
         #   event = ActiveSupport::Notifications::Event.new(*args)
@@ -24,9 +24,13 @@ module Voidtools
         # require 'voidtools/dm/paginable'
       end
     end
-  end
   
-  if defined?(Sinatra)
+  end
+end
+
+  
+if defined?(Sinatra)
+  module Voidtools
     path = File.expand_path "../", __FILE__
     require "#{path}/voidtools/sinatra/sinatra"
   end
