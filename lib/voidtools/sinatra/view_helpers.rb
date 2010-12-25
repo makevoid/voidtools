@@ -1,7 +1,7 @@
 module Voidtools
   module Sinatra
     module ViewHelpers
-      def link_to(label, path)
+      def link_to(label, path="javascript:void(0)")
         # haml_tag :a, { href: path } do
         #   haml_concat label
         # end
