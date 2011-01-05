@@ -1,6 +1,12 @@
 # Voidtools
 #### growing toolset for Rails 3 dm+jquery+haml+warden setup flavored with:
 
+
+### building the gem locally and installing it in one line (for trying things and stuff):
+
+gem build voidtools.gemspec; gem install voidtools-0.2.1.gem
+
+
 ---
 
 ### DataMapper
