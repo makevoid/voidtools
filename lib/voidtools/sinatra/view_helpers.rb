@@ -20,9 +20,9 @@ module Voidtools
         tag = type_js ?  "script" : "link"
         [assets].flatten.each do |asset|
           options = if type_js
-            { type: "text/javascript", src: asset  }
+            { type: "text/javascript", src: "/js/#{asset}.js"  }
           else
-            { rel: "stylesheet", href: asset }
+            { rel: "stylesheet", href: "/css/#{asset}.css" }
           end
           haml_tag tag, options
         end
