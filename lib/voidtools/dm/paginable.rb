@@ -2,23 +2,24 @@ module Voidtools
   
   module Paginable
 
-    PER_PAGE = 70
-
     def self.included(base)
       base.send :extend, ClassMethods
     end
 
     module ClassMethods
+      def x_page
+        defined?(per_page) ? per_page : 10
+      end
+      
       def paginate(options)
         page = options[:page].to_i
         options.delete :page
-        all( options.merge(limit: PER_PAGE, offset: PER_PAGE*page) )
+        all( options.merge(limit: x_page, offset: x_page*page) )
       end
 
       def pages
-        all.count/PER_PAGE
+        all.count/x_page
       end
-    
     end
 
   end

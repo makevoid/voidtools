@@ -1,22 +1,18 @@
 # Voidtools
-#### growing toolset for Rails 3 dm+jquery+haml+warden setup flavored with:
-
-
-### building the gem locally and installing it in one line (for trying things and stuff):
-
-gem build voidtools.gemspec; gem install voidtools-0.2.1.gem
-
+#### growing toolset for Rails 3 and Sinatra with DataMapper and HAML class and helper modules
 
 ---
 
 ### DataMapper
-- `error_messages_for`
+- form helpers: error_messages_for
+- name url
+- pagination
 
-### Haml
-- soon...
-
-### Warden, Devise
-- soon...
+### Sinatra
+- view helpers
+  - link_to
+  - image tag
+  - include_assets (include_js, include_css)
 
 note: ruby 1.9 required
 
@@ -33,4 +29,4 @@ or
 
 ### Build & install
 
-gem build voidtools.gemspec; gem install voidtools-0.1.2.gem
+gem build voidtools.gemspec; gem install voidtools-0.2.3.gem

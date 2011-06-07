@@ -8,9 +8,11 @@ module Voidtools
         entity
       end
       return nil if obj.errors.map{ |e| e } == []
-      lis = "".html_safe
-      obj.errors.map{ |e| lis << content_tag( :li, e[0].to_s) }
-      content_tag( :ul, lis, class: "error_messages")
+      haml_tag :ul, { class: "error_messages" } do
+        obj.errors.map do |err| 
+          haml_tag(:li){ haml_concat err[0].to_s } 
+        end
+      end
     end
   
   end
