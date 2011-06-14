@@ -35,6 +35,12 @@ module Voidtools
       def include_css(assets)
         include_assets "css", assets
       end
+      
+      def body_class
+        path = request.path.split("/")[1..2]
+        path = path.join(" ") unless path.nil?
+        request.path == "/" ? "home" : path
+      end
     end
   end
 end
