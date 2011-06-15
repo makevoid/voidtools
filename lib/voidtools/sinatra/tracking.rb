@@ -1,5 +1,4 @@
 module Voidtools 
-module Sinatra
 module Tracking
   def analytics(id, domain) # before the end of head tag
    <<-FUN
@@ -45,6 +44,5 @@ FUN
       })();"
 FUN
   end
-end
 end
 end

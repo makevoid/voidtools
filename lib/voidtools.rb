@@ -15,9 +15,11 @@ module Voidtools
         #   puts "Voidrails - got notification: #{event.inspect}"
         # end
         require 'voidtools/dm/form_helpers'
+        require 'voidtools/sinatra/tracking'
         ActiveSupport.on_load(:action_view) do
            module ApplicationHelper
              include Voidtools::FormHelpers
+             include Voidtools::Tracking
            end
         end
         # require 'voidtools/dm/name_url'
