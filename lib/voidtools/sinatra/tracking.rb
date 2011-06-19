@@ -41,7 +41,7 @@ FUN
         t.src = '//secure.gaug.es/track.js';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(t, s);
-      })();"
+      })();
 FUN
   end
 end
