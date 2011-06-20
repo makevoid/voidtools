@@ -1,4 +1,13 @@
 # Voidtools::Tracking
+# ---------------------------------------------
+
+# Setup:
+# 
+#   put these lines in your app_helper.rb:
+#
+#     require 'voidtools/sinatra/tracking'
+#     include Voidtools::Tracking
+
 
 # Usage:
 # 

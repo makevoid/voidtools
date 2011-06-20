@@ -1,3 +1,35 @@
+# Paginable
+#
+#   Usage:
+#     
+#      in your model add:  
+#         require 'voidtools/dm/paginable'
+#         include Voidtools::Paginable
+# 
+#      in a controller (or similar):
+#         Model.paginate(page: params[:page])
+#
+#      in your view:
+#         .pagination
+#           pag:
+#           - Model.pages.times do |i|
+#             %a{ :href => "/path?page=#{i}" }= i+1
+#
+#      (optional) in your model: 
+#        def self.per_page
+#          20
+#        end
+#
+#   sass:
+#
+#     .pagination
+#       margin: 10px 20px
+#       a
+#         padding: 3px 6px
+#         background: #DDD
+#       a:hover
+#         background: #FFF
+
 module Voidtools
   
   module Paginable
@@ -18,7 +50,7 @@ module Voidtools
       end
 
       def pages
-        all.count/x_page
+        (all.count.to_f/x_page).ceil
       end
     end
 
