@@ -2,8 +2,8 @@ module Voidtools
   module Sinatra
     module ViewHelpers
       
-      require 'voidtools/sinatra/tracking'
-      include ::Tracking
+      # require 'voidtools/sinatra/tracking'
+      # include Voidtools::Tracking
       
       def link_to(label, path="javascript:void(0)", options={})
         # haml_tag :a, { href: path } do
