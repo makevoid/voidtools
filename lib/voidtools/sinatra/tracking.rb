@@ -27,12 +27,17 @@ module Tracking
     end
   end
   
-  def analytics(id, domain) # before the end of head tag
+  def analytics(id, *domains) # before the end of head tag
+    # FIXME: try with multiple domains
+    # TODO: test case
     track_run do
-      <<-FUN
+      out = <<-FUN
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '#{id}']);
-      //_gaq.push(['_setDomainName', '.#{domain}']);
+      _gaq.push(['_setAccount', '#{id}']);FUN
+      domains.each do |domain|
+        out << "      _gaq.push(['_setDomainName', '.#{domain}']);"
+      end
+      <<-FUN
       _gaq.push(['_trackPageview']);
 
       (function() {
