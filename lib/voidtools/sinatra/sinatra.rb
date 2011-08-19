@@ -5,7 +5,7 @@ require "#{path}/tracking"
 module Voidtools
   module Sinatra
     module ViewHelpers
-      include Tracking
+      include Voidtools::Tracking
     end
   end
 end
