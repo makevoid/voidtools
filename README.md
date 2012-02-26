@@ -3,6 +3,11 @@
 
 ---
 
+### Install from RubyGems
+
+    gem i voidtools
+   
+
 ### DataMapper
 - form helpers: error_messages_for
 - name url
@@ -29,7 +34,10 @@ or
 
 ### Build & install
 
-gem build voidtools.gemspec; gem install voidtools-0.2.3.gem
+
+    git clone git://github.com/makevoid/voidtools.git
+    cd voidtools;
+    gem build voidtools.gemspec; gem install voidtools-x.x.x.gem
 
 
 ### Changelog
