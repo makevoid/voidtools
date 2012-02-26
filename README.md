@@ -30,3 +30,9 @@ or
 ### Build & install
 
 gem build voidtools.gemspec; gem install voidtools-0.2.3.gem
+
+
+### Changelog
+
+v0.2.9 - added datamapper module autoload if DataMapper is defined
+v0.2.3 - first stable version, autoloads modules for sinatra and rails

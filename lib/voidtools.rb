@@ -1,14 +1,14 @@
 module Voidtools
-  
+
   # namespace our plugin and inherit from Rails::Railtie
   # to get our plugin into the initialization process
   if defined?(Rails)
     class Railtie < Rails::Railtie
- 
+
       # configure our plugin on boot. other extension points such
       # as configuration, rake tasks, etc, are also available
       initializer "voidtools.initialize" do |app|
- 
+
         # subscribe to all rails notifications: controllers, AR, etc.
         # ActiveSupport::Notifications.subscribe do |*args|
         #   event = ActiveSupport::Notifications::Event.new(*args)
@@ -27,9 +27,14 @@ module Voidtools
       end
     end
   end
-  
+
+  @@path = File.expand_path "../", __FILE__
+
   if defined?(Sinatra)
-    path = File.expand_path "../", __FILE__
-    require "#{path}/voidtools/sinatra/sinatra"
+    require "#{@@path}/voidtools/sinatra/sinatra"
+  end
+
+  if defined?(DataMapper)
+    require "#{@@path}/voidtools/dm/datamapper"
   end
 end
