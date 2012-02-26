@@ -1,5 +1,5 @@
 # Voidtools
-#### growing toolset for Rails 3 and Sinatra with DataMapper and HAML class and helper modules
+#### handy toolset for Sinatra with DataMapper and HAML
 
 ---
 
@@ -14,6 +14,7 @@
 - pagination
 
 ### Sinatra
+- seo tracking
 - view helpers
   - link_to
   - image tag
