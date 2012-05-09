@@ -10,10 +10,6 @@ module Voidtools
     #   self.name_url = generate_url_from_name
     # end
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f8377c0e7f2a4c11717a96590bfadaec0fdad5e8
     def generate_name_url
       nurl = generate_url_from_name
       update(name_url: nurl)
