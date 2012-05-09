@@ -1,6 +1,6 @@
 module Voidtools
   module NameUrl
-    def generate_url_from_name
+    def generate_url_from_name(name)
       name.gsub(/\./, '').gsub(/'|"/, ' ').gsub(/\s+/, '_').gsub(/_-_/, '_').downcase
     end
 
@@ -10,6 +10,10 @@ module Voidtools
     #   self.name_url = generate_url_from_name
     # end
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8377c0e7f2a4c11717a96590bfadaec0fdad5e8
     def generate_name_url
       nurl = generate_url_from_name
       update(name_url: nurl)

@@ -1,7 +1,12 @@
 # Voidtools
-#### growing toolset for Rails 3 and Sinatra with DataMapper and HAML class and helper modules
+#### handy toolset for Sinatra with DataMapper and HAML
 
 ---
+
+### Install from RubyGems
+
+    gem i voidtools
+   
 
 ### DataMapper
 - form helpers: error_messages_for
@@ -9,6 +14,7 @@
 - pagination
 
 ### Sinatra
+- seo tracking
 - view helpers
   - link_to
   - image_tag
@@ -98,4 +104,13 @@ a simple stylesheet (sass):
 
 ### Build & install
 
-gem build voidtools.gemspec; gem install voidtools-0.2.3.gem
+
+    git clone git://github.com/makevoid/voidtools.git
+    cd voidtools;
+    gem build voidtools.gemspec; gem install voidtools-x.x.x.gem
+
+
+### Changelog
+
+v0.2.9 - added datamapper module autoload if DataMapper is defined
+v0.2.3 - first stable version, autoloads modules for sinatra and rails

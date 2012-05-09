@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'voidtools'
   s.version     = Voidtools::VERSION
-  s.summary     = 'custom rails3 toolset - for dm+jquery+haml+warden setup'
-  s.description = 'custom rails3 toolset setup with helpers for: datamapper, jquery, haml and warden'
+  s.summary     = 'handy toolset for sinatra and datamapper'
+  s.description = 'handy toolset for sinatra and datamapper - sinatra modules: tracking, view_helpers - datamapper modules: form_helpers, name_url, paginable'
 
   s.author            = "Francesco 'makevoid' Canessa"
   s.email             = 'makevoid@gmail.com'
