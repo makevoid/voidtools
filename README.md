@@ -43,7 +43,7 @@ example: in your DM model add a name_url property
     property :name_url, String, length: 255
     
     before :create do
-      self.name_url = generate_url_from_name
+      self.name_url = generate_url_from_name name
     end
 
 before create, the name_url will be generated to make your urls seo-friendly
